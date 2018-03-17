@@ -1,0 +1,15 @@
+.SiteFooter {
+  background-color: #eee;
+  color: #999;
+  padding: 3em 0 0;
+  font-size: 14.3px;
+  position: relative;
+
+  :global(a) {
+    color: #555;
+    &:global(:hover){
+      text-decoration: underline;
+    }
+  }
+
+}

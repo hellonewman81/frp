@@ -1,0 +1,59 @@
+.overflowBox {
+
+  display:flex;
+
+  @media (max-width: 575px) {
+    /* allow scrolling of flex container */
+    overflow-x:auto;
+    /* Allow smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* overwrite list container styles */
+    margin:2px;
+    /* color for some visual of the spacing */
+    border: 1px solid #e2e6ea;
+    margin-right: -15px;
+    border-right: none;
+
+  }
+
+  @media (min-width: 576px) {
+    // large screens
+    flex-flow: row wrap;
+  }
+
+}
+
+.overflowBoxContent {
+  /* remove list style bullets */
+  list-style-type:none;
+  width: 37%;
+
+  /* vertical center with 10px on left and right */
+  // margin:auto 10px;
+
+  @media (min-width: 576px) {
+    // large screens
+
+
+    // displays grid of 6 on sm viewport up
+    .grid-6 & {
+      width: 16.66667%;
+      max-width: 16.66667%;
+    }
+
+    // displays grid of 4 on sm viewport up
+    .grid-4 & {
+      width: 16.66667%;
+      max-width: 16.66667%;
+    }
+
+    flex: auto;
+  }
+
+}
+
+.overflowBoxContentImg {
+  // max-width: 120px;
+  height: auto;
+  margin: 0 auto;
+}

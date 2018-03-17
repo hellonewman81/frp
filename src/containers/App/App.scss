@@ -1,0 +1,27 @@
+
+
+.appContent {
+ // margin: 50px 0; // for fixed navbar
+  position: relative;
+}
+
+.notifs {
+  margin: 15px 0;
+}
+
+:global(.form-control-feedback) {
+  text-align: inherit;
+}
+
+.navbar {
+  border-bottom: 1px solid #e9ecef;
+}
+
+:global(.btn-outline-primary) {
+  background-color: #fff;
+}
+
+:global(#content){
+    max-width: 100%;
+    overflow-x: hidden;
+}

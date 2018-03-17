@@ -1,0 +1,190 @@
+$padding-base: 15px;
+$color-body: #fff;
+$color-border: #ddd;
+$color-link: #0275d8;
+$border-radius: .25rem;
+
+.TabbedContent {
+
+  // Accordion to tab breakpoints.
+  @media (min-width: 992px){
+    padding: 1.25rem;
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: $border-radius;
+  }
+
+  .navTabs{
+
+    @media (max-width: 991px){
+      display: none;
+    }
+
+    margin-bottom: 1.25rem;
+    border-bottom: none;
+    border-right: 1px solid $color-border;
+    display: flex;
+    flex-flow: column nowrap;
+
+    :global(.nav-item + .nav-item) {
+      margin-top: .25rem;
+    }
+
+    :global(.nav-link) {
+      transition: border-color .125s ease-in;
+      white-space: nowrap;
+      font-weight: 700;
+
+      &:hover {
+        background-color: lighten($color-border, 10%);
+        border-color: transparent;
+      }
+    }
+
+    :global(.nav-link.active) {
+      border-bottom-color: $color-border;
+      border-right-color: $color-body;
+      border-bottom-left-radius: $border-radius;
+      border-top-right-radius: 0;
+      margin-right: -1px;
+      border-bottom-color: #F66A23;
+      border-bottom-width: 2px;
+
+      &:global(:hover) {
+        background-color: $color-body;
+        border-color: $color-link $color-body $color-link $color-link;
+      }
+    }
+  }
+
+  .tabbedContentAccord {
+    width: 100%;
+
+
+
+    // Accordion to tab breakpoints.
+    @media (max-width: 991px){
+
+      width: 100%;
+
+      > :global(.tab-pane) {
+
+        background-color: #fff;
+        display: block;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 6px;
+
+        &:global(.active){
+          display: block;
+
+          .accordBtn {
+            color: #4e92df;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+
+      }
+      :global(.nav-tabs){
+        display: none;
+      }
+
+
+      .accordBtn {
+        display: block;
+        padding: 17px 27px;
+        background: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        color: #222;
+        text-transform: uppercase;
+        border: 1px solid #eaeaea;
+        border-left: 7px solid #4e92df;
+        position: relative;
+        transition: all 0.3s ease 0s;
+
+        :global(i) {
+          color: #aeaeae;
+        }
+
+      }
+
+      //
+      .accordContent {
+        display: none;
+        padding: 12px 27px;
+        font-size: 14px;
+        color: #808080;
+        line-height: 23px;
+        border: 1px solid #eaeaea;
+        border-top: none;
+        border-left: 7px solid #eaeaea;
+
+        :global(.tab-pane.active) & {
+          display: block;
+        }
+
+      }
+
+      :global(.tab-pane.active) .accordContent {
+        display: block;
+      }
+
+      .accordContent {
+
+      }
+
+      #accordion .panel-title a.collapsed{
+        color: #333;
+      }
+      #accordion .panel-title a:before,
+      #accordion .panel-title a.collapsed:before{
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 14px;
+        color: #333;
+        line-height: 24px;
+        position: absolute;
+        top: 23px;
+        right: 25px;
+      }
+      #accordion .panel-title a.collapsed:before{
+        content: "\f106";
+      }
+      #accordion .panel-title a:hover,
+      #accordion .panel-title a.collapsed:hover,
+      #accordion .panel-title a:before,
+      #accordion .panel-title a:hover:before{
+        color: #fbc02d;
+      }
+      #accordion .panel-body{
+
+      }
+      #accordion .panel-body p{
+        margin-bottom: 0;
+      }
+
+
+
+
+
+    }
+
+  }
+  .accordContent {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+}

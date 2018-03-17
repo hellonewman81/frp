@@ -1,0 +1,92 @@
+
+.greatPlaceStyle {
+// initially any map object has left top corner at lat lng coordinates
+// it's on you to set object origin to 0,0 coordinates
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: -20px;
+  top: -20px;
+  border: 5px solid #f44336;
+  border-radius: 40px;
+  background-color: #fff;
+  text-align: center;
+  color: #3f51b5;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px;
+};
+
+
+.mapWrapper {
+  height: 400px;
+  width: 100%;
+  border-left: 6px solid #fff;
+  border-right: 6px solid #fff;
+}
+
+/*
+
+@import '../../theme/variables.scss';
+
+.home {
+  dd {
+    margin-bottom: 15px;
+  }
+}
+
+.masthead {
+  background: #2d2d2d;
+  padding: 40px 20px;
+  color: white;
+  text-align: center;
+  .logo {
+    $size: 200px;
+    margin: auto;
+    height: $size;
+    width: $size;
+    border-radius: $size / 2;
+    border: 1px solid $cyan;
+    box-shadow: inset 0 0 10px $cyan;
+    vertical-align: middle;
+    p {
+      line-height: $size;
+      margin: 0px;
+    }
+    img {
+      width: 75%;
+      margin: auto;
+    }
+  }
+  h1 {
+    color: $cyan;
+    font-size: 4em;
+  }
+  h2 {
+    color: #ddd;
+    font-size: 2em;
+    margin: 20px;
+  }
+  a {
+    color: #ddd;
+  }
+  p {
+    margin: 10px;
+  }
+  .humility {
+    color: $humility;
+    a {
+      color: $humility;
+    }
+  }
+  .github {
+    font-size: 1.5em;
+  }
+}
+
+.counterContainer {
+  text-align: center;
+  margin: 20px;
+}
+
+*/

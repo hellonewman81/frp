@@ -1,0 +1,46 @@
+// @import './sbicon/style.scss';
+@import '~font-awesome/scss/font-awesome.scss';
+@import './nprogress.scss';
+@import "./footright/footright.scss";
+
+
+/**
+ * Override Bootstrap styles that you can't modify via variables here.
+ *
+ */
+
+:global(.font-size-0625) {
+  font-size: .625rem !important;
+}
+
+:global(.font-size-0750) {
+  font-size: .75rem !important;
+}
+
+:global(.font-size-0875) {
+  font-size: .875rem !important;
+}
+
+:global(.font-size-1000) {
+  font-size: 1rem !important;
+}
+
+:global(.font-size-1125) {
+  font-size: 1.125rem !important;
+}
+
+:global(.font-size-1250) {
+  font-size: 1.25rem !important;
+}
+
+:global(.link-black) {
+  color: #222 !important;
+}
+
+// Filters - card modifiers
+:global(.card-filter) {
+  :global(.card-header) {
+    border-bottom: 4px solid #f26a22;
+  }
+  :global(.card-filter .list-group-item.active) {background-color:#f8f9fa!important}
+}

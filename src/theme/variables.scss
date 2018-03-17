@@ -1,0 +1,145 @@
+/**
+ *  Define scss variables here.
+ *
+ *  Available options for Bootstrap:
+ *  http://getbootstrap.com/customize/
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+// Custom Colors
+$cyan: #33e0ff;
+$humility: #777;
+
+// Bootstrap Variables
+$brand-primary: darken(#428bca, 6.5%);
+$brand-secondary: #e25139;
+$brand-success: #5cb85c;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+$brand-info: #5bc0de;
+
+$text-color: #333;
+// Sparesbox Overrides for Bootstrap Variables
+
+// $blue:    #2d9ed8;
+$blue-brand:    #0d2034;
+$primary-brand: #F05F40;
+
+
+// stylelint-disable
+$colors: ();
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary-brand,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $blue-brand
+), $theme-colors);
+// stylelint-enable
+
+$enable-rounded:  true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// stylelint-disable
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25), // 4px
+  2: ($spacer * .5), // 8px
+  3: $spacer,  // 16px
+  4: ($spacer * 1.5), // 24px
+  5: ($spacer * 2),  // 32px
+  6: ($spacer * 2.5)  ,  // 40px
+  7: ($spacer * 3)    // 48px
+);
+// stylelint-enable
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color: #222;
+
+// Links
+//
+// Style anchor elements.
+
+$link-hover-color:  darken($link-color, 35%);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-width: 1px;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      "Montserrat","Helvetica Neue",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-base:            $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$headings-font-family:        "Montserrat","Helvetica Neue",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// List group
+
+$list-group-active-color:           #222;
+$list-group-active-bg:              #dceef9; // lighten($blue, 12%);
+$list-group-active-border-color:    $blue;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width:           28px;
+
+// Grid columns
+//
+// $breadcrumb-padding-y:              .75rem !default;
+// $breadcrumb-padding-x:              1rem !default;
+// $breadcrumb-item-padding:           .5rem !default;
+
+// $breadcrumb-margin-bottom:          1rem !default;
+
+// $breadcrumb-bg:                     $gray-200 !default;
+// $breadcrumb-divider-color:          $gray-600 !default;
+// $breadcrumb-active-color:           $gray-600 !default;
+$breadcrumb-divider: ">";
+
+// turn off fixed widths till lg breakpoint
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 1200px
+);
