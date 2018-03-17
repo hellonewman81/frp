@@ -9,7 +9,6 @@ import { isLoaded as isPageLoaded, load as loadPage } from 'redux/modules/page';
 import View from 'components/View/View';
 import ModalLink from 'components/ModalLink/ModalLink';
 
-
 const linkResolver = function (doc) {
   // Pretty URLs for known types
   if (doc.type === 'service') return `/service/${doc.uid}`;
@@ -27,7 +26,7 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data.data,
+    page: state.page.data.data
   }),
   {}
 )
@@ -65,12 +64,16 @@ export default class Page extends Component {
               </Row>
               <Row>
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-                  {page.image &&
-                  <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} className="mb-3" />
-                  }
+                  {page.image && (
+                    <img
+                      src={page.image.url}
+                      alt={page.image.alt}
+                      style={{ maxWidth: '100%' }}
+                      className="mb-3"
+                    />
+                  )}
                 </Col>
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-
                   <div className="lead">{RichText.render(page.overview, linkResolver)}</div>
                   <div>{RichText.render(page.body, linkResolver)}</div>
                 </Col>

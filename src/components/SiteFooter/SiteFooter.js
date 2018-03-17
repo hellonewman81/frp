@@ -22,15 +22,25 @@ export default class SiteFooter extends React.Component {
             <div className="col-sm-4">
               <h5 className="footer-heading">Help</h5>
               <ul className="list-inline">
-                <li><a href="mailto:footrightpodiatry@gmail.com">Contact us</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/bookings">Bookings</a></li>
+                <li>
+                  <a href="mailto:footrightpodiatry@gmail.com">Contact us</a>
+                </li>
+                <li>
+                  <a href="/services">Services</a>
+                </li>
+                <li>
+                  <a href="/bookings">Bookings</a>
+                </li>
               </ul>
             </div>
             <div className="col-sm-4">
               <h5 className="footer-heading">Social</h5>
               <ul className="list-inline">
-                <li><a href="https://www.facebook.com/macquariepodiatry/"><i className="fa fa-facebook-square fa-2x" /> Facebook</a></li>
+                <li>
+                  <a href="https://www.facebook.com/macquariepodiatry/">
+                    <i className="fa fa-facebook-square fa-2x" /> Facebook
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -52,7 +62,9 @@ export default class SiteFooter extends React.Component {
 
           <div className="footer-copyright py-4 ">
             <p>Shop 1044B, level 1 upper, Macquarie Shopping Centre, Macquarie Park NSW 2113</p>
-            <p><b>Phone:</b> (02) 9887 2270</p>
+            <p>
+              <b>Phone:</b> (02) 9887 2270
+            </p>
             <p>Copyright &copy; 2018 footrightpodiatry.com.au</p>
           </div>
         </div>

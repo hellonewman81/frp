@@ -25,7 +25,6 @@ const linkResolver = function (doc) {
     }
   }
 })
-
 export default class Booking extends Component {
   static propTypes = {
     page: PropTypes.shape({
@@ -43,7 +42,7 @@ export default class Booking extends Component {
   };
 
   render() {
-    const { } = this.props;
+    const {} = this.props;
     return (
       <View contaainer={false}>
         <div className="pt-md-2">
@@ -52,7 +51,6 @@ export default class Booking extends Component {
             meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
           />
           <Container>
-
             <Iframe
               url="https://machealthprof.appointment.mobi:8443/BookingGateway/Account/LogOn?ReturnUrl=%2Fbookinggateway"
               position="relative"
@@ -62,8 +60,6 @@ export default class Booking extends Component {
               height="567px"
               allowFullScreen
             />
-
-
           </Container>
         </div>
       </View>

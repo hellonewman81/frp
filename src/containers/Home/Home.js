@@ -10,7 +10,9 @@ import { isLoaded as isPageLoaded, load as loadPage } from 'redux/modules/page';
 import View from 'components/View/View';
 // import ModalLink from 'components/ModalLink/ModalLink';
 
-const AnyReactComponent = ({ text, styles }) => <div className={styles.greatPlaceStyle}>{text}</div>;
+const AnyReactComponent = ({ text, styles }) => (
+  <div className={styles.greatPlaceStyle}>{text}</div>
+);
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
@@ -29,7 +31,7 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data.data,
+    page: state.page.data.data
   }),
   {}
 )
@@ -69,18 +71,20 @@ export default class Home extends Component {
             {/* page.image &&
               <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} />
             */}
-
             <header className="masthead">
               <div className="container">
                 <div className="intro-text">
                   <div className="intro-lead-in">Welcome To</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
-                  <a className="btn btn-primary btn-xl text-uppercase mr-3" href="/services">Our Services</a>
-                  <a className="btn btn-primary btn-xl text-uppercase ml-3" href="/booking">Book Appointment</a>
+                  <a className="btn btn-primary btn-xl text-uppercase mr-3" href="/services">
+                    Our Services
+                  </a>
+                  <a className="btn btn-primary btn-xl text-uppercase ml-3" href="/booking">
+                    Book Appointment
+                  </a>
                 </div>
               </div>
             </header>
-
             <section id="services">
               <div className="container">
                 {/*
@@ -98,7 +102,11 @@ export default class Home extends Component {
                       <i className="fa fa-map-marker fa-stack-1x fa-inverse" />
                     </span>
                     <h4 className="service-heading">Location</h4>
-                    <p className="text-muted">Foot Right Podiatry is the leading Podiatry practice in Sydney's Macquarie Park. It is conveniently located within Macquarie Health Professionals - an allied health clinic located at Macquarie Shopping Centre.</p>
+                    <p className="text-muted">
+                      Foot Right Podiatry is the leading Podiatry practice in Sydney's Macquarie
+                      Park. It is conveniently located within Macquarie Health Professionals - an
+                      allied health clinic located at Macquarie Shopping Centre.
+                    </p>
                   </div>
                   <div className="col-md-4">
                     {/**/}
@@ -108,28 +116,35 @@ export default class Home extends Component {
                     </span>
 
                     <h4 className="service-heading">Commitment</h4>
-                    <p className="text-muted">We are absolutely committed to providing first class care in a warm and professional environment. We aim to work together with our clients, focusing on the individual's needs and health goals, so that we can achieve the best outcomes possible.</p>
+                    <p className="text-muted">
+                      We are absolutely committed to providing first class care in a warm and
+                      professional environment. We aim to work together with our clients, focusing
+                      on the individual's needs and health goals, so that we can achieve the best
+                      outcomes possible.
+                    </p>
                   </div>
                   <div className="col-md-4">
-
                     <span className="fa-stack fa-4x">
                       <i className="fa fa-circle fa-stack-2x text-primary" />
                       <i className="fa fa-plus fa-stack-1x fa-inverse" />
                     </span>
 
                     <h4 className="service-heading">Culture</h4>
-                    <p className="text-muted">Our culture of professional development and continuing education ensures you will always receive the most up to date and evidence based treatments. Our podiatrists regularly attend conferences, courses and in-house education sessions.</p>
+                    <p className="text-muted">
+                      Our culture of professional development and continuing education ensures you
+                      will always receive the most up to date and evidence based treatments. Our
+                      podiatrists regularly attend conferences, courses and in-house education
+                      sessions.
+                    </p>
                   </div>
                 </div>
               </div>
             </section>
-
             {/*
             <Container className="my-5">
               {RichText.render(page.body, linkResolver)}
             </Container>
             */}
-
             <section className="bg-light" id="portfolio">
               <Container>
                 <Row className="mb-5">
@@ -158,52 +173,50 @@ export default class Home extends Component {
                     ))}
                 </Row>
                 <p className="text-center">
-                  <a className="btn btn-primary btn-xl text-uppercase" href="/services">See All Services</a>
+                  <a className="btn btn-primary btn-xl text-uppercase" href="/services">
+                    See All Services
+                  </a>
                 </p>
               </Container>
             </section>
             <section className="bg-primary py-0" id="location">
-
-                <Row>
-
-                  <Col xs={12} sm={6} lg={7} className="text-center">
-
-                    <div className={styles.mapWrapper}>
-                      <GoogleMapReact
-                        bootstrapURLKeys={{ key: 'AIzaSyBPFCPdNnMJNWtZqEbLWUjZj27YyJ4N3AI' }}
-                        defaultCenter={this.props.center}
-                        defaultZoom={this.props.zoom}
-                      >
-                        <AnyReactComponent
-                          lat={-33.7774822}
-                          lng={151.0498696}
-                          text="Foot Right Podiatry"
-                          styles={styles}
-                        />
-                      </GoogleMapReact>
-                    </div>
-                  </Col>
-                  <Col xs={12} sm={6} lg={5} className="py-5 float-left">
-                    <h2 className="section-heading h4 mb-4">Location</h2>
-                    {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
-                    <p>
-                      Foot Right Podiatry, Shop 1044B  <br />
-                      level 1 upper, Macquarie Shopping Centre <br />
-                      Macquarie Park, NSW 2113 <br />
-                    </p>
-                    <p><b>Phone:</b> (02) 9887 2270 </p>
-                  </Col>
-                </Row>
-                <Row />
-
+              <Row>
+                <Col xs={12} sm={6} lg={7} className="text-center">
+                  <div className={styles.mapWrapper}>
+                    <GoogleMapReact
+                      bootstrapURLKeys={{ key: 'AIzaSyBPFCPdNnMJNWtZqEbLWUjZj27YyJ4N3AI' }}
+                      defaultCenter={this.props.center}
+                      defaultZoom={this.props.zoom}
+                    >
+                      <AnyReactComponent
+                        lat={-33.7774822}
+                        lng={151.0498696}
+                        text="Foot Right Podiatry"
+                        styles={styles}
+                      />
+                    </GoogleMapReact>
+                  </div>
+                </Col>
+                <Col xs={12} sm={6} lg={5} className="py-5 float-left">
+                  <h2 className="section-heading h4 mb-4">Location</h2>
+                  {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
+                  <p>
+                    Foot Right Podiatry, Shop 1044B <br />
+                    level 1 upper, Macquarie Shopping Centre <br />
+                    Macquarie Park, NSW 2113 <br />
+                  </p>
+                  <p>
+                    <b>Phone:</b> (02) 9887 2270{' '}
+                  </p>
+                </Col>
+              </Row>
+              <Row />
             </section>
-
             Newsletter signup:
-
           </div>
         ) : (
-          <Row>Unable to load product
-
+          <Row>
+            Unable to load product
             <section id="services">
               <div className="container">
                 <div className="row">
@@ -219,7 +232,10 @@ export default class Home extends Component {
                       <i className="fa fa-shopping-cart fa-stack-1x fa-inverse" />
                     </span>
                     <h4 className="service-heading">E-Commerce</h4>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p className="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                      architecto quo inventore harum ex magni, dicta impedit.
+                    </p>
                   </div>
                   <div className="col-md-4">
                     <span className="fa-stack fa-4x">
@@ -227,7 +243,10 @@ export default class Home extends Component {
                       <i className="fa fa-laptop fa-stack-1x fa-inverse" />
                     </span>
                     <h4 className="service-heading">Responsive Design</h4>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p className="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                      architecto quo inventore harum ex magni, dicta impedit.
+                    </p>
                   </div>
                   <div className="col-md-4">
                     <span className="fa-stack fa-4x">
@@ -235,21 +254,16 @@ export default class Home extends Component {
                       <i className="fa fa-lock fa-stack-1x fa-inverse" />
                     </span>
                     <h4 className="service-heading">Web Security</h4>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p className="text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam
+                      architecto quo inventore harum ex magni, dicta impedit.
+                    </p>
                   </div>
                 </div>
               </div>
             </section>
-
-            <section>
-
-
-            </section>
-
-
+            <section />
           </Row>
-
-
         )}
       </View>
     );

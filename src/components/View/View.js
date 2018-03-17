@@ -4,7 +4,6 @@ import { Container } from 'reactstrap';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 
 export default class View extends React.Component {
-
   static propTypes = {
     children: PropTypes.objectOf(PropTypes.any).isRequired,
     container: PropTypes.bool,

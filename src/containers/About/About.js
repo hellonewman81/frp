@@ -10,7 +10,9 @@ import { isLoaded as isPageLoaded, load as loadPage } from 'redux/modules/page';
 import View from 'components/View/View';
 // import ModalLink from 'components/ModalLink/ModalLink';
 
-const AnyReactComponent = ({ text, styles }) => <div className={styles.greatPlaceStyle}>{text}</div>;
+const AnyReactComponent = ({ text, styles }) => (
+  <div className={styles.greatPlaceStyle}>{text}</div>
+);
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
@@ -29,7 +31,7 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data.data,
+    page: state.page.data.data
   }),
   {}
 )
@@ -75,15 +77,24 @@ export default class About extends Component {
                 <div className="intro-text">
                   <div className="intro-lead-in">About</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
-                  <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Services</a> <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Book Now</a>
+                  <a
+                    className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                    href="#services"
+                  >
+                    Services
+                  </a>{' '}
+                  <a
+                    className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+                    href="#services"
+                  >
+                    Book Now
+                  </a>
                 </div>
               </div>
             </header>
 
             <section className="py-7 bg-light">
-              <Container className="my-5">
-                {RichText.render(page.body, linkResolver)}
-              </Container>
+              <Container className="my-5">{RichText.render(page.body, linkResolver)}</Container>
             </section>
 
             <section id="about">
@@ -97,24 +108,31 @@ export default class About extends Component {
                 <div className="row">
                   <div className="col-lg-12">
                     <ul className="timeline">
-
                       {page.practitioners &&
-                      page.practitioners.map((item, idx) => (
-                        <li className={idx % 2 === 0 ? 'timeline-inverted' : ''} >
-                          <div className="timeline-image">
-                            <img className="rounded-circle img-fluid" src="img/about/1.jpg" alt="" />
-                          </div>
-                          <div className="timeline-panel">
-                            <div className="timeline-heading">
-                              <h4>{RichText.render(item.name, linkResolver)}</h4>
-                              <div className="subheading">{RichText.render(item.lead, linkResolver)}</div>
+                        page.practitioners.map((item, idx) => (
+                          <li className={idx % 2 === 0 ? 'timeline-inverted' : ''}>
+                            <div className="timeline-image">
+                              <img
+                                className="rounded-circle img-fluid"
+                                src="img/about/1.jpg"
+                                alt=""
+                              />
                             </div>
-                            <div className="timeline-body">
-                              <p className="text-muted">{RichText.render(item.blurb, linkResolver)}</p>
+                            <div className="timeline-panel">
+                              <div className="timeline-heading">
+                                <h4>{RichText.render(item.name, linkResolver)}</h4>
+                                <div className="subheading">
+                                  {RichText.render(item.lead, linkResolver)}
+                                </div>
+                              </div>
+                              <div className="timeline-body">
+                                <p className="text-muted">
+                                  {RichText.render(item.blurb, linkResolver)}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        </li>
-                      ))}
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>

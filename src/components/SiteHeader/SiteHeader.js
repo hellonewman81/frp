@@ -11,7 +11,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Container } from 'reactstrap';
+  Container
+} from 'reactstrap';
 // f00tr1ght! { path: '/booking', exact: true, component: Booking },
 
 export default class Example extends React.Component {
