@@ -8,7 +8,7 @@ import GoogleMapReact from 'google-map-react';
 import { Row, Col, Container } from 'reactstrap';
 import { isLoaded as isPageLoaded, loadServices } from 'redux/modules/page';
 import View from 'components/View/View';
-// import ModalLink from 'components/ModalLink/ModalLink';
+import ModalLink from 'components/ModalLink/ModalLink';
 
 const linkResolver = function (doc) {
   console.log(doc);

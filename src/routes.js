@@ -6,6 +6,7 @@ import { App, Home, About, NotFound } from 'containers';
 import Page from 'containers/Page/Loadable';
 import Booking from 'containers/Booking/Loadable';
 import Services from 'containers/Services/Loadable';
+import Contact from 'containers/Contact/Loadable';
 
 const routes = [
   {
@@ -16,7 +17,7 @@ const routes = [
       { path: '/services', exact: true, component: Services },
       { path: '/services/:id', exact: true, component: Page },
       { path: '/booking', exact: true, component: Booking },
-      { path: '/contact', exact: true, component: Booking },
+      { path: '/contact', exact: true, component: Contact },
       { path: '/error', exact: true, component: NotFound },
       { component: NotFound }
     ]

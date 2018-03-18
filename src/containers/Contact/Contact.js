@@ -17,7 +17,7 @@ const linkResolver = function (doc) {
   // Fallback for other types, in case new custom types get created
   return `/blog/${doc.id}`;
 };
-/*
+
 @provideHooks({
   fetch: async ({ store: { dispatch, getState }, location }) => {
     if (!isPageLoaded(getState())) {
@@ -25,8 +25,7 @@ const linkResolver = function (doc) {
     }
   }
 })
-*/
-export default class Booking extends Component {
+export default class Contact extends Component {
   static propTypes = {
     page: PropTypes.shape({
       breadcrumbs: PropTypes.any,
@@ -52,15 +51,11 @@ export default class Booking extends Component {
             meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
           />
           <Container>
-            <Iframe
-              url="https://machealthprof.appointment.mobi:8443/BookingGateway/Account/LogOn?ReturnUrl=%2Fbookinggateway"
-              position="relative"
-              width="100%"
-              id="myId"
-              className="myClassname"
-              height="567px"
-              allowFullScreen
-            />
+            <form action="http://formspree.io/hellonewman81@gmail.com" method="post">
+              <input type="email" name="_replyto" />
+              <textarea name="body"></textarea>
+              <input type="submit" value="Send" />
+            </form>
           </Container>
         </div>
       </View>

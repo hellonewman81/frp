@@ -77,18 +77,6 @@ export default class About extends Component {
                 <div className="intro-text">
                   <div className="intro-lead-in">About</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
-                  <a
-                    className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-                    href="#services"
-                  >
-                    Services
-                  </a>{' '}
-                  <a
-                    className="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-                    href="#services"
-                  >
-                    Book Now
-                  </a>
                 </div>
               </div>
             </header>
