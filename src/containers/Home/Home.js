@@ -52,9 +52,9 @@ export default class Home extends Component {
 
   static defaultProps = {
     changeVid: null,
-    center: [-33.7774822, 151.0498696],
+    center: [-33.776752, 151.120515],
     zoom: 12,
-    greatPlaceCoords: { lat: -33.7774822, lng: 151.0498696 }
+    greatPlaceCoords: { lat: -33.776752, lng: 151.120515 }
   };
   //  https://www.google.com.au/maps/dir/''/Foot+Right+Podiatry,+Shop+1044B,+level+1+upper,+Macquarie+Shopping+Centre,+Macquarie+Park+NSW+2113/@11.98z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6b12a60db3ffffff:0xa7c7c0221f9308cf!2m2!1d151.121023!2d-33.7769179
   render() {
@@ -85,9 +85,11 @@ export default class Home extends Component {
                         Book Appointment
                       </a>
                     </Col>
+                    {/*
                     <Col xs={12} sm={6}>
 
                     </Col>
+                    */}
                   </Row>
 
 
@@ -198,8 +200,8 @@ export default class Home extends Component {
                       defaultZoom={this.props.zoom}
                     >
                       <AnyReactComponent
-                        lat={-33.7774822}
-                        lng={151.0498696}
+                        lat={-33.776752}
+                        lng={151.120515}
                         text="Foot Right Podiatry"
                         styles={styles}
                       />

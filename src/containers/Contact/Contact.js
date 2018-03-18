@@ -32,9 +32,9 @@ export default class Contact extends Component {
 
   static defaultProps = {
     changeVid: null,
-    center: [-33.7774822, 151.0498696],
+    center: [-33.776752, 151.120515],
     zoom: 12,
-    greatPlaceCoords: { lat: -33.7774822, lng: 151.0498696 }
+    greatPlaceCoords: { lat: -33.776752, lng: 151.120515 }
   };
 
   render() {
@@ -83,8 +83,8 @@ export default class Contact extends Component {
                     defaultZoom={this.props.zoom}
                   >
                     <AnyReactComponent
-                      lat={-33.7774822}
-                      lng={151.0498696}
+                      lat={-33.776752}
+                      lng={151.120515}
                       text="Foot Right Podiatry"
                       styles={styles}
                     />
