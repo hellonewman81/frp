@@ -11,7 +11,7 @@ import View from 'components/View/View';
 // import ModalLink from 'components/ModalLink/ModalLink';
 
 const AnyReactComponent = ({ text, styles }) => (
-  <div className={styles.greatPlaceStyle}>{text}</div>
+  <div className={styles.greatPlaceStyle}><i className="fa fa-map-marker fa-2x" /> {text}</div>
 );
 
 const linkResolver = function (doc) {
@@ -53,7 +53,7 @@ export default class Home extends Component {
   static defaultProps = {
     changeVid: null,
     center: [-33.776752, 151.120515],
-    zoom: 12,
+    zoom: 14,
     greatPlaceCoords: { lat: -33.776752, lng: 151.120515 }
   };
   //  https://www.google.com.au/maps/dir/''/Foot+Right+Podiatry,+Shop+1044B,+level+1+upper,+Macquarie+Shopping+Centre,+Macquarie+Park+NSW+2113/@11.98z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6b12a60db3ffffff:0xa7c7c0221f9308cf!2m2!1d151.121023!2d-33.7769179
