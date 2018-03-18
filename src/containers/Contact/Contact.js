@@ -49,14 +49,14 @@ export default class Contact extends Component {
           />
           <Container className="py-4">
             {/*
-            <form action="http://formspree.io/hellonewman81@gmail.com" method="post">
+            <form action="http://formspree.io/machealthprof@gmail.com" method="post">
               <input type="email" name="_replyto" />
               <textarea  />
             </form>
             */}
             <h2 className="section-heading text-uppercase">Contact Us</h2>
 
-            <Form action="http://formspree.io/hellonewman81@gmail.com" method="post">
+            <Form action="http://formspree.io/machealthprof@gmail.com" method="post">
               <FormGroup>
                 <Label for="_replyto">Email</Label>
                 <Input type="email" name="_replyto" placeholder="Email" />
