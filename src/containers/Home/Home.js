@@ -76,12 +76,21 @@ export default class Home extends Component {
                 <div className="intro-text">
                   <div className="intro-lead-in">Welcome To</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
-                  <a className="btn btn-primary btn-xl text-uppercase mr-3" href="/services">
-                    Our Services
-                  </a>
-                  <a className="btn btn-primary btn-xl text-uppercase ml-3" href="/booking">
-                    Book Appointment
-                  </a>
+                  <Row>
+                    <Col xs={12} sm={12} className="">
+                      <a className="btn btn-primary d-block btn-xl d-md-inline-block mr-md-5 text-uppercase" href="/services">
+                        Our Services
+                      </a>
+                      <a className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase" href="/booking">
+                        Book Appointment
+                      </a>
+                    </Col>
+                    <Col xs={12} sm={6}>
+
+                    </Col>
+                  </Row>
+
+
                 </div>
               </div>
             </header>
@@ -212,7 +221,9 @@ export default class Home extends Component {
               </Row>
               <Row />
             </section>
+            {/*
             Newsletter signup:
+            */}
           </div>
         ) : (
           <Row>

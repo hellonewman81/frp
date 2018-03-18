@@ -100,7 +100,6 @@ export default class Services extends Component {
                             {/*
                             <p className="text-muted">{RichText.render(item.body, linkResolver)}</p>
                             */}
-                            MOOO
                           </div>
                         </a>
                       </div>
