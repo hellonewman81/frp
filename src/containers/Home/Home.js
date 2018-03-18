@@ -212,7 +212,7 @@ export default class Home extends Component {
                   <div className="px-3 px-sm-0">
                     <h2 className="section-heading h4 mb-4">Location</h2>
                     {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
-                    <p>
+                    <p className="mb-1">
                       Foot Right Podiatry, Shop 1044B <br />
                       level 1 upper, Macquarie Shopping Centre <br />
                       Macquarie Park, NSW 2113 <br />
@@ -220,6 +220,15 @@ export default class Home extends Component {
                     <p>
                       <b>Phone:</b> (02) 9887 2270{' '}
                     </p>
+
+                    <h5>Opening Hours</h5>
+                    <p className="mb-1"><b>Mon</b> 8:30 am – 6:00 pm</p>
+                    <p className="mb-1"><b>Tue</b> 8:30 am – 6:00 pm</p>
+                    <p className="mb-1"><b>Wed</b> 8:30 am – 6:00 pm</p>
+                    <p className="mb-1"><b>Thu</b> 8:30 am – 7:00 pm</p>
+                    <p className="mb-1"><b>Fri</b> 8:00 am – 2:00 pm</p>
+                    <p className="mb-1"><b>Sat</b> 8:30 am – 2:00 pm</p>
+                    <p className="mb-0"><b>Sun</b> Closed</p>
                   </div>
                 </Col>
               </Row>
