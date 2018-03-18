@@ -4,8 +4,6 @@ import serialize from 'serialize-javascript';
 import Helmet from 'react-helmet';
 import config from 'config';
 
-// import { BASE_URL_MAGENTO } from '../constants';
-
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
  * Used in server-side code only to wrap the string output of the

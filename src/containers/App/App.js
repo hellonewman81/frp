@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 import Helmet from 'react-helmet';
 import config from 'config';
-// import GoogleTagManager from 'helpers/GoogleTagManager';
+import GoogleTagManager from 'helpers/GoogleTagManager';
 import SiteHeader from 'components/SiteHeader/SiteHeader';
 import SiteFooter from 'components/SiteFooter/SiteFooter';
 import ModalDisplay from 'components/ModalDisplay/ModalDisplay';
@@ -76,13 +76,10 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head} />
-
+        <GoogleTagManager gtmId="GTM-5HCXLLR" />
         <SiteHeader />
-
         <div className={styles.appContent}>{renderRoutes(route.routes)}</div>
-
         <ModalDisplay className="modal-lg" />
-
         <SiteFooter />
       </div>
     );

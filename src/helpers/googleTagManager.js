@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import gtmParts from 'react-google-tag-manager';
 
-import { getLsItem } from './sbLocalStorage';
-
 class GoogleTagManager extends React.Component {
   componentDidMount() {
-    const dataL = getLsItem('lsDataLayer');
-    window.dataLayer.push({ ...dataL });
+
   }
 
   render() {

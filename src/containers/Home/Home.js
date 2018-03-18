@@ -207,16 +207,18 @@ export default class Home extends Component {
                   </div>
                 </Col>
                 <Col xs={12} sm={6} lg={5} className="py-5 float-left">
-                  <h2 className="section-heading h4 mb-4">Location</h2>
-                  {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
-                  <p>
-                    Foot Right Podiatry, Shop 1044B <br />
-                    level 1 upper, Macquarie Shopping Centre <br />
-                    Macquarie Park, NSW 2113 <br />
-                  </p>
-                  <p>
-                    <b>Phone:</b> (02) 9887 2270{' '}
-                  </p>
+                  <div className="px-3 px-sm-0">
+                    <h2 className="section-heading h4 mb-4">Location</h2>
+                    {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
+                    <p>
+                      Foot Right Podiatry, Shop 1044B <br />
+                      level 1 upper, Macquarie Shopping Centre <br />
+                      Macquarie Park, NSW 2113 <br />
+                    </p>
+                    <p>
+                      <b>Phone:</b> (02) 9887 2270{' '}
+                    </p>
+                  </div>
                 </Col>
               </Row>
               <Row />
