@@ -78,7 +78,7 @@ export default class Home extends Component {
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
                   <Row>
                     <Col xs={12} sm={12} className="">
-                      <a className="btn btn-primary d-block btn-xl d-md-inline-block mr-md-5 text-uppercase" href="/services">
+                      <a className="btn btn-primary d-block btn-xl mb-3 mb-md-0 d-md-inline-block mr-md-5 text-uppercase" href="/services">
                         Our Services
                       </a>
                       <a className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase" href="/booking">
