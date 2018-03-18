@@ -63,8 +63,8 @@ export default class Services extends Component {
         {page ? (
           <div>
             <Helmet
-              title="Foot Right Podiatry"
-              meta={[{ name: 'Services', content: 'Foot Right Podiatry' }]}
+              title="Services | Foot Right Podiatry"
+              meta={[{ name: 'Services | Foot Right Podiatry', content: 'Services | Foot Right Podiatry' }]}
             />
 
             <header

@@ -65,8 +65,8 @@ export default class About extends Component {
         {page ? (
           <div>
             <Helmet
-              title="Foot Right Podiatry"
-              meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
+              title="About | Foot Right Podiatry"
+              meta={[{ name: 'About | Foot Right Podiatry', content: 'About | Foot Right Podiatry' }]}
             />
             {/* page.image &&
               <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} />
