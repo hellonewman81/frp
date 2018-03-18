@@ -53,7 +53,7 @@ export default class Contact extends Component {
           <Container>
             <form action="http://formspree.io/hellonewman81@gmail.com" method="post">
               <input type="email" name="_replyto" />
-              <textarea name="body"></textarea>
+              <textarea name="body" />
               <input type="submit" value="Send" />
             </form>
           </Container>
