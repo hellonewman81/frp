@@ -44,8 +44,8 @@ export default class Contact extends Component {
       <View contaainer={false}>
         <div className="pt-md-2">
           <Helmet
-            title="Foot Right Podiatry"
-            meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
+            title="Contact"
+            meta={[{ name: 'Contact | Foot Right Podiatry', content: 'Contact | Foot Right Podiatry' }]}
           />
           <Container className="py-4">
             {/*

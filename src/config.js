@@ -26,7 +26,7 @@ module.exports = Object.assign(
           { property: 'og:site_name', content: 'Foot Right Podiatry' },
           {
             property: 'og:image',
-            content: '/skin/frontend/enterprise/sparesbox/images/global/sparesbox-logo.svg'
+            content: ''
           },
           { property: 'og:locale', content: 'en_AU' },
           { property: 'og:title', content: 'Foot Right Podiatry' },
@@ -42,13 +42,13 @@ module.exports = Object.assign(
           { property: 'robots', content: 'INDEX, FOLLOW' },
           {
             property: 'google-site-verification',
-            content: 'TUxHliFrKkpun8zW50Nqq-UcaodGxfs9_Qim833X61I'
+            content: 'OaySxtYDdqGFmLgV137w-6OpTOp4k1TbRS5HJ6KCG7k'
           }
-        ],
-        link: [
+        ]
+        /* , link: [
           { rel: 'canonical', content: '/' },
           { rel: 'publisher', content: 'https://plus.google.com/112055120681563804751' }
-        ]
+        ] */
       }
     }
   },

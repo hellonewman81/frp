@@ -53,7 +53,7 @@ export default class Page extends Component {
         {page ? (
           <div className="pt-md-2">
             <Helmet
-              title="Foot Right Podiatry"
+              title={page.title[0].text}
               meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
             />
             <Container>
