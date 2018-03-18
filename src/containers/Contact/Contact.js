@@ -54,6 +54,8 @@ export default class Contact extends Component {
               <textarea  />
             </form>
             */}
+            <h2 className="section-heading text-uppercase">Contact Us</h2>
+
             <Form action="http://formspree.io/hellonewman81@gmail.com" method="post">
               <FormGroup>
                 <Label for="_replyto">Email</Label>
@@ -66,8 +68,6 @@ export default class Contact extends Component {
               {/*
               <input type="submit" value="Send" />
               */}
-
-
               <Button type="submit" value="Send">Submit</Button>
             </Form>
 

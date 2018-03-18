@@ -57,6 +57,8 @@ export default class Html extends Component {
           <meta name="apple-mobile-web-app-status-bar-style" content="black" />
           <meta name="apple-mobile-web-app-title" content="Foot Right Podiatry" />
 
+          <meta name="google-site-verification" content="OaySxtYDdqGFmLgV137w-6OpTOp4k1TbRS5HJ6KCG7k" />
+
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
             rel="stylesheet"
