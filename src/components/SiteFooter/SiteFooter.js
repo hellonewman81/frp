@@ -43,19 +43,6 @@ export default class SiteFooter extends React.Component {
                 </li>
               </ul>
             </div>
-
-            {/*
-            <div className="col-sm-8">
-              <div className="row">
-                <div className="col-xs-3">
-                  <h5 className="footer-heading">Resources</h5>
-                  <ul>
-                    <li><a href="/links">Links</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            */}
           </div>
 
           <hr className="mw-100" />
