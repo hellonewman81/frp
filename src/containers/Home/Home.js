@@ -161,7 +161,7 @@ export default class Home extends Component {
                 <Row className="mb-5">
                   <Col xs={12} className="text-center">
                     <h2 className="section-heading text-uppercase">Services</h2>
-                    <h3 className="section-subheading text-muted">Some of our common services</h3>
+                    <h3 className="section-subheading text-muted">Some of our podiatry services</h3>
                   </Col>
                 </Row>
                 <Row>
