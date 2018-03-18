@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 import Helmet from 'react-helmet';
 import config from 'config';
-import GoogleTagManager from 'helpers/GoogleTagManager';
+import GoogleTagManager from 'helpers/googleTagManager';
 import SiteHeader from 'components/SiteHeader/SiteHeader';
 import SiteFooter from 'components/SiteFooter/SiteFooter';
 import ModalDisplay from 'components/ModalDisplay/ModalDisplay';
