@@ -66,7 +66,7 @@ export default class Home extends Component {
           <div>
             <Helmet
               title="Foot Right Podiatry"
-              meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
+              meta={[{ name: 'description', content: 'North Ryde, Ryde, Maquarie park, Top Ryde, Marsfield, Maquarie Centre' }]}
             />
             {/* page.image &&
               <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} />
@@ -227,7 +227,7 @@ export default class Home extends Component {
                     <p className="mb-1"><b>Wed</b> 8:30 am – 6:00 pm</p>
                     <p className="mb-1"><b>Thu</b> 8:30 am – 7:00 pm</p>
                     <p className="mb-1"><b>Fri</b> 8:00 am – 2:00 pm</p>
-                    <p className="mb-1"><b>Sat</b> 8:30 am – 2:00 pm</p>
+                    <p className="mb-1"><b>Sat</b> 8:30 am – 5:00 pm</p>
                     <p className="mb-0"><b>Sun</b> Closed</p>
                   </div>
                 </Col>
