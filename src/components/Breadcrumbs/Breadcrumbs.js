@@ -19,7 +19,7 @@ export default class Breadcrumbs extends React.Component {
                 key={`bc-${item.url}`}
               >
                 {items.length !== idx + 1 ? (
-                  <a href={`${idx === 0 ? BASE_URL_MAGENTO : `/${item.url}`}`}>{item.label}</a>
+                  <a href={`${idx === 0 ? '/' : `/${item.url}`}`}>{item.label}</a>
                 ) : (
                   <span>
                     <b>{item.label}</b>

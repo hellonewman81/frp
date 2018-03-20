@@ -27,7 +27,7 @@ const linkResolver = function (doc) {
   () => ({
     breadcrumbs: [
       {
-        url: '/',
+        url: '',
         label: 'Home'
       },
       {
