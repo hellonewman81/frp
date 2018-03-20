@@ -4,11 +4,9 @@ import Helmet from 'react-helmet';
 import { provideHooks } from 'redial';
 import { connect } from 'react-redux';
 import { Link, RichText, Date } from 'prismic-reactjs';
-import GoogleMapReact from 'google-map-react';
 import { Row, Col, Container } from 'reactstrap';
 import { isLoaded as isPageLoaded, loadServices } from 'redux/modules/page';
-import View from 'components/View/View';
-import ModalLink from 'components/ModalLink/ModalLink';
+import { Breadcrumbs, View } from 'components';
 
 const linkResolver = function (doc) {
   console.log(doc);
@@ -29,7 +27,17 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data
+    page: state.page.data,
+    breadcrumbs: [
+      {
+        url: '/',
+        label: 'Home'
+      },
+      {
+        url: '/services',
+        label: 'Services'
+      }
+    ]
   }),
   {}
 )
@@ -59,12 +67,17 @@ export default class Services extends Component {
     const { page } = this.props;
     // const styles = require('./Services.scss');
     return (
-      <View contaainer={false}>
+      <View container={false} breadcrumbs={false}>
         {page ? (
           <div>
             <Helmet
               title="Services | Foot Right Podiatry"
-              meta={[{ name: 'Services | Foot Right Podiatry', content: 'Services | Foot Right Podiatry' }]}
+              meta={[
+                {
+                  name: 'Services | Foot Right Podiatry',
+                  content: 'Services | Foot Right Podiatry'
+                }
+              ]}
             />
 
             <header
@@ -81,6 +94,10 @@ export default class Services extends Component {
                 </div>
               </div>
             </header>
+
+            <Container>
+              <Breadcrumbs items={this.props.breadcrumbs} />
+            </Container>
 
             <section className="bg-light" id="portfolio">
               <Container>

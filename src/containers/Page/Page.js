@@ -6,8 +6,7 @@ import { connect } from 'react-redux';
 import { Link, RichText, Date } from 'prismic-reactjs';
 import { Row, Col, Container } from 'reactstrap';
 import { isLoaded as isPageLoaded, load as loadPage } from 'redux/modules/page';
-import View from 'components/View/View';
-import ModalLink from 'components/ModalLink/ModalLink';
+import { Breadcrumbs, View } from 'components';
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
@@ -26,7 +25,21 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data.data
+    page: state.page.data.data,
+    breadcrumbs: [
+      {
+        url: '/',
+        label: 'Home'
+      },
+      {
+        url: 'services',
+        label: 'Services'
+      },
+      {
+        url: null,
+        label: state.page.data.data.title[0].text
+      }
+    ]
   }),
   {}
 )
@@ -56,6 +69,9 @@ export default class Page extends Component {
               title={page.title[0].text}
               meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
             />
+            <Container>
+              <Breadcrumbs items={this.props.breadcrumbs} />
+            </Container>
             <Container>
               <Row>
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>

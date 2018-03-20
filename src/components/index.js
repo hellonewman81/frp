@@ -9,3 +9,5 @@ export Provider from './Provider/Provider';
 export ReduxAsyncConnect from './ReduxAsyncConnect/ReduxAsyncConnect';
 export ModalLink from './ModalLink/ModalLink';
 export CardAccordion from './CardAccordion/CardAccordion.js';
+export Breadcrumbs from './Breadcrumbs/Breadcrumbs.js';
+export View from './View/View.js';

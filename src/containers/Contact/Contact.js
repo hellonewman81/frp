@@ -23,6 +23,21 @@ const linkResolver = function (doc) {
   return `/blog/${doc.id}`;
 };
 
+@connect(
+  () => ({
+    breadcrumbs: [
+      {
+        url: '/',
+        label: 'Home'
+      },
+      {
+        url: '/contact',
+        label: 'Contact'
+      }
+    ]
+  }),
+  {}
+)
 export default class Contact extends Component {
   static propTypes = {
     center: PropTypes.array,
@@ -41,13 +56,15 @@ export default class Contact extends Component {
     // const {} = this.props;
     const styles = require('./Contact.scss');
     return (
-      <View contaainer={false}>
+      <View container breadcrumbs={this.props.breadcrumbs}>
         <div className="pt-md-2">
           <Helmet
             title="Contact"
-            meta={[{ name: 'Contact | Foot Right Podiatry', content: 'Contact | Foot Right Podiatry' }]}
+            meta={[
+              { name: 'Contact | Foot Right Podiatry', content: 'Contact | Foot Right Podiatry' }
+            ]}
           />
-          <Container className="py-4">
+          <div className="py-4">
             {/*
             <form action="http://formspree.io/machealthprof@gmail.com" method="post">
               <input type="email" name="_replyto" />
@@ -68,10 +85,11 @@ export default class Contact extends Component {
               {/*
               <input type="submit" value="Send" />
               */}
-              <Button type="submit" value="Send">Submit</Button>
+              <Button type="submit" value="Send">
+                Submit
+              </Button>
             </Form>
-
-          </Container>
+          </div>
 
           <section className="bg-primary py-0" id="location">
             <Row>
