@@ -211,7 +211,6 @@ export default class Home extends Component {
                 <Col xs={12} sm={6} lg={5} className="py-5 float-left">
                   <div className="px-3 px-sm-0">
                     <h2 className="section-heading h4 mb-4">Location</h2>
-                    {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
                     <p className="mb-1">
                       Foot Right Podiatry, Shop 1044B <br />
                       level 1 upper, Macquarie Shopping Centre <br />
@@ -226,8 +225,8 @@ export default class Home extends Component {
                     <p className="mb-1"><b>Tue</b> 8:30 am – 6:00 pm</p>
                     <p className="mb-1"><b>Wed</b> 8:30 am – 6:00 pm</p>
                     <p className="mb-1"><b>Thu</b> 8:30 am – 7:00 pm</p>
-                    <p className="mb-1"><b>Fri</b> 8:00 am – 2:00 pm</p>
-                    <p className="mb-1"><b>Sat</b> 8:30 am – 5:00 pm</p>
+                    <p className="mb-1"><b>Fri</b> 8:00 am – 5:00 pm</p>
+                    <p className="mb-1"><b>Sat</b> 8:30 am – 1:00 pm</p>
                     <p className="mb-0"><b>Sun</b> Closed</p>
                   </div>
                 </Col>
