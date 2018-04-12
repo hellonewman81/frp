@@ -13,16 +13,18 @@ const getData = async req => {
   // const [path, id] = res;
   // console.log(path + ' ' + id);
   // /services/biomechanical-assessment
+
+  console.log(pathname);
+
   let results = [];
   await Prismic.getApi(apiEndpoint, { accessToken: apiToken })
     .then(api =>
       // api.query(Prismic.Predicates.at('document.type', path || 'page_home'), {})).then(response => {
-      api.query(Prismic.Predicates.at('document.type', 'services'), {}))
+      api.query(Prismic.Predicates.at('document.type', pathname.replace('/', '')), {}))
     .then(
       response => {
         // An empty query will return all the documents
-        console.log('Documents: ', JSON.stringify(response.results));
-
+        // console.log('Documents: ', JSON.stringify(response.results));
         results = response.results;
       },
       err => {

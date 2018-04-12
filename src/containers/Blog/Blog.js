@@ -4,13 +4,12 @@ import Helmet from 'react-helmet';
 import { provideHooks } from 'redial';
 import { connect } from 'react-redux';
 import { Link, RichText, Date } from 'prismic-reactjs';
-import { Row, Col, Container } from 'reactstrap';
+import { Row, Container } from 'reactstrap';
 import { isLoaded as isPageLoaded, loadServices } from 'redux/modules/page';
 import { Breadcrumbs, View } from 'components';
 
 const linkResolver = function (doc) {
   console.log(doc);
-
   // Pretty URLs for known types
   if (doc.type === 'services') return `/services/${doc.uid}`;
   if (doc.type === 'blog') return `/blog/${doc.uid}`;
@@ -35,8 +34,8 @@ const linkResolver = function (doc) {
         label: 'Home'
       },
       {
-        url: '/services',
-        label: 'Services'
+        url: '/blog',
+        label: 'Blog'
       }
     ]
   }),
@@ -72,11 +71,11 @@ export default class Services extends Component {
         {page ? (
           <div>
             <Helmet
-              title="Services | Foot Right Podiatry"
+              title="Blog | Foot Right Podiatry"
               meta={[
                 {
-                  name: 'Services | Foot Right Podiatry',
-                  content: 'Services | Foot Right Podiatry'
+                  name: 'Blog | Foot Right Podiatry',
+                  content: 'Blog | Foot Right Podiatry'
                 }
               ]}
             />
@@ -85,14 +84,15 @@ export default class Services extends Component {
               className="masthead"
               style={{
                 backgroundImage:
-                  'url(https://prismic-io.s3.amazonaws.com/footright%2F1dd1172d-e197-4d8b-b0bf-965ab3f93a7f_services-foot-right-podiatry.png)',
+                  'url(https://prismic-io.s3.amazonaws.com/footright%2F6c8c48a7-b1a0-4521-98bb-df7aa14066f4_hero_blog.png)',
                 height: '50vh',
                 minHeight: '50vh',
               }}
+
             >
               <div className="container">
-                <div className="intro-text" style={{paddingTop: '20vh'}}>
-                  <div className="intro-lead-in">Services</div>
+                <div className="intro-text" style={ {paddingTop: '20vh'} }>
+                  <div className="intro-lead-in">Blog</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
                 </div>
               </div>
@@ -117,9 +117,9 @@ export default class Services extends Component {
                           <img className="img-fluid" src={item.data.image.url} alt="" />
                           <div className="portfolio-caption">
                             <h4>{RichText.render(item.data.title, linkResolver)}</h4>
-                            {/*
-                            <p className="text-muted">{RichText.render(item.body, linkResolver)}</p>
-                            */}
+                            {/* */}
+                            <p className="text-muted">{RichText.render(item.data.overview, linkResolver)}</p>
+
                           </div>
                         </a>
                       </div>

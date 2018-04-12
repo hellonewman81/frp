@@ -19,7 +19,7 @@ const getData = async req => {
       // api.query(Prismic.Predicates.at('document.type', path || 'page_home'), {})).then(response => {
       api.query(
         Prismic.Predicates.at(
-          path && id ? 'my.services.uid' : 'document.type',
+          path && id ? `my.${path}.uid` : 'document.type',
           id || `page_${path || 'home'}`
         ),
         {}
@@ -35,7 +35,7 @@ const getData = async req => {
       }
     );
   //  console.log(req);
-  return x;
+  return { ...x, data: { ...x.data, url_path: path } };
 };
 
 // Export it to make it available outside

@@ -23,10 +23,13 @@ export default class SiteFooter extends React.Component {
               <h5 className="footer-heading">Help</h5>
               <ul className="list-inline">
                 <li>
-                  <a href="mailto:footrightpodiatry@gmail.com">Contact us</a>
+                  <a href="/contact">Contact us</a>
                 </li>
                 <li>
                   <a href="/services">Services</a>
+                </li>
+                <li>
+                  <a href="/services">Blog</a>
                 </li>
                 <li>
                   <a href="/bookings">Bookings</a>

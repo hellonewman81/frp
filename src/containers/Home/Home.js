@@ -11,12 +11,15 @@ import View from 'components/View/View';
 // import ModalLink from 'components/ModalLink/ModalLink';
 
 const AnyReactComponent = ({ text, styles }) => (
-  <div className={styles.greatPlaceStyle}><i className="fa fa-map-marker fa-2x" /> {text}</div>
+  <div className={styles.greatPlaceStyle}>
+    <i className="fa fa-map-marker fa-2x" /> {text}
+  </div>
 );
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
   if (doc.type === 'services') return `/services/${doc.uid}`;
+  if (doc.type === 'blog') return `/blog/${doc.uid}`;
   if (doc.type === 'page') return `/${doc.uid}`;
   // Fallback for other types, in case new custom types get created
   return `/blog/${doc.id}`;
@@ -66,7 +69,12 @@ export default class Home extends Component {
           <div>
             <Helmet
               title="Foot Right Podiatry"
-              meta={[{ name: 'description', content: 'North Ryde, Ryde, Maquarie park, Top Ryde, Marsfield, Maquarie Centre' }]}
+              meta={[
+                {
+                  name: 'description',
+                  content: 'North Ryde, Ryde, Maquarie park, Top Ryde, Marsfield, Maquarie Centre'
+                }
+              ]}
             />
             {/* page.image &&
               <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} />
@@ -78,10 +86,16 @@ export default class Home extends Component {
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
                   <Row>
                     <Col xs={12} sm={12} className="">
-                      <a className="btn btn-primary d-block btn-xl mb-3 mb-md-0 d-md-inline-block mr-md-5 text-uppercase" href="/services">
+                      <a
+                        className="btn btn-primary d-block btn-xl mb-3 mb-md-0 d-md-inline-block mr-md-5 text-uppercase"
+                        href="/services"
+                      >
                         Our Services
                       </a>
-                      <a className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase" href="/booking">
+                      <a
+                        className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase"
+                        href="/booking"
+                      >
                         Book Appointment
                       </a>
                     </Col>
@@ -91,8 +105,6 @@ export default class Home extends Component {
                     </Col>
                     */}
                   </Row>
-
-
                 </div>
               </div>
             </header>
@@ -115,7 +127,7 @@ export default class Home extends Component {
                     <h4 className="service-heading">Location</h4>
                     <p className="text-muted">
                       Foot Right Podiatry is the leading Podiatry practice in Sydney's Macquarie
-                      Park. It is conveniently located within Macquarie Health Professionals - an
+                      Park. It is conveniently located inside Macquarie Health Professionals - an
                       allied health clinic located at Macquarie Shopping Centre.
                     </p>
                   </div>
@@ -177,7 +189,7 @@ export default class Home extends Component {
                           <img className="img-fluid" src={item.thumb.url} alt="" />
                           <div className="portfolio-caption">
                             {RichText.render(item.title, linkResolver)}
-                            <p className="text-muted">{RichText.render(item.body, linkResolver)}</p>
+                            <p className="text-muted">Read more</p>
                           </div>
                         </a>
                       </div>
@@ -221,13 +233,27 @@ export default class Home extends Component {
                     </p>
 
                     <h5>Opening Hours</h5>
-                    <p className="mb-1"><b>Mon</b> 8:30 am – 6:00 pm</p>
-                    <p className="mb-1"><b>Tue</b> 8:30 am – 6:00 pm</p>
-                    <p className="mb-1"><b>Wed</b> 8:30 am – 6:00 pm</p>
-                    <p className="mb-1"><b>Thu</b> 8:30 am – 7:00 pm</p>
-                    <p className="mb-1"><b>Fri</b> 8:00 am – 5:00 pm</p>
-                    <p className="mb-1"><b>Sat</b> 8:30 am – 1:00 pm</p>
-                    <p className="mb-0"><b>Sun</b> Closed</p>
+                    <p className="mb-1">
+                      <b>Mon</b> 8:30 am – 6:00 pm
+                    </p>
+                    <p className="mb-1">
+                      <b>Tue</b> 8:30 am – 6:00 pm
+                    </p>
+                    <p className="mb-1">
+                      <b>Wed</b> 8:30 am – 6:00 pm
+                    </p>
+                    <p className="mb-1">
+                      <b>Thu</b> 8:30 am – 7:00 pm
+                    </p>
+                    <p className="mb-1">
+                      <b>Fri</b> 8:00 am – 5:00 pm
+                    </p>
+                    <p className="mb-1">
+                      <b>Sat</b> 8:30 am – 1:00 pm
+                    </p>
+                    <p className="mb-0">
+                      <b>Sun</b> Closed
+                    </p>
                   </div>
                 </Col>
               </Row>

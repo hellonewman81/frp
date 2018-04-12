@@ -73,9 +73,16 @@ export default class About extends Component {
               <img src={page.image.url} alt={page.image.alt} style={{ maxWidth: '100%' }} />
             */}
 
-            <header className="masthead" style={{ backgroundImage: `url(${page.hero_image.url})` }}>
+            <header
+              className="masthead"
+              style={{
+                backgroundImage: `url(${page.hero_image.url})`,
+                height: '50vh',
+                minHeight: '50vh'
+              }}
+            >
               <div className="container">
-                <div className="intro-text">
+                <div className="intro-text" style={{ paddingTop: '20vh' }}>
                   <div className="intro-lead-in">About</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
                 </div>

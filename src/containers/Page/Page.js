@@ -10,7 +10,8 @@ import { Breadcrumbs, View } from 'components';
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
-  if (doc.type === 'service') return `/service/${doc.uid}`;
+  if (doc.type === 'services') return `/services/${doc.uid}`;
+  if (doc.type === 'blog') return `/blog/${doc.uid}`;
   if (doc.type === 'page') return `/${doc.uid}`;
   // Fallback for other types, in case new custom types get created
   return `/blog/${doc.id}`;
@@ -32,8 +33,8 @@ const linkResolver = function (doc) {
         label: 'Home'
       },
       {
-        url: 'services',
-        label: 'Services'
+        url: state.page.data.data.url_path,
+        label: state.page.data.data.url_path === 'services' ? 'Services' : 'Blog',
       },
       {
         url: null,
@@ -71,6 +72,9 @@ export default class Page extends Component {
             />
             <Container>
               <Breadcrumbs items={this.props.breadcrumbs} />
+
+              {page.path}
+
             </Container>
             <Container>
               <Row>
@@ -94,6 +98,26 @@ export default class Page extends Component {
                   <div>{RichText.render(page.body, linkResolver)}</div>
                 </Col>
               </Row>
+
+              {page.url_path === 'services' &&
+                <Row className="my-5 text-center">
+                  <Col xs={12}>
+
+                    <a
+                      className="btn btn-outline-primary btn-xl d-block d-md-inline-block text-uppercase m-1"
+                      href="/contact"
+                    >
+                      Contact Us
+                    </a>
+                    <a
+                      className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase mx-1"
+                      href="/booking"
+                    >
+                      Book Appointment
+                    </a>
+                  </Col>
+                </Row>
+              }
             </Container>
           </div>
         ) : (
