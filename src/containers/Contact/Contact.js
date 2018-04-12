@@ -111,10 +111,10 @@ export default class Contact extends Component {
               </Col>
               <Col xs={12} sm={6} lg={5} className="py-5 float-left">
                 <h2 className="section-heading h4 mb-4">Location</h2>
-                {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
-                <p>
-                  Foot Right Podiatry, Shop 1044B <br />
-                  level 1 upper, Macquarie Shopping Centre <br />
+                {/* <h3 className="section-subheading text-muted">located inside Macquarie Health Professionals.</h3> */}
+                <p className="mb-1">
+                  Foot Right Podiatry, (located inside Macquarie Health Professionals) <br />
+                  Shop 1044B level 1 upper, Macquarie Shopping Centre <br />
                   Macquarie Park, NSW 2113 <br />
                 </p>
                 <p>
