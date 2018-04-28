@@ -20,7 +20,7 @@ const getData = async req => {
   await Prismic.getApi(apiEndpoint, { accessToken: apiToken })
     .then(api =>
       // api.query(Prismic.Predicates.at('document.type', path || 'page_home'), {})).then(response => {
-      api.query(Prismic.Predicates.at('document.type', pathname.replace('/', '')), {}))
+      api.query(Prismic.Predicates.at('document.type', pathname.replace('/', '')), { orderings : `[my.${pathname.replace('/', '')}.sort_order] asc` }))
     .then(
       response => {
         // An empty query will return all the documents

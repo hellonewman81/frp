@@ -22,7 +22,7 @@ const getData = async req => {
       api.query(
         Prismic.Predicates.at(
           path && id ? `my.${path}.uid` : 'document.type',
-          id || `page_${path || 'home'}`
+          id || `page_${path || 'home'}`,
         ),
         {}
       ))
