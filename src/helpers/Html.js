@@ -37,6 +37,7 @@ export default class Html extends Component {
       assets, store, content, bundles
     } = this.props;
     const head = Helmet.renderStatic();
+    const bodyAttrs = head.bodyAttributes.toComponent();
 
     const getScript = (assetsPath, file, id) => <script src={assetsPath + file} key={id} />;
 
@@ -55,7 +56,19 @@ export default class Html extends Component {
           <meta name="apple-mobile-web-app-status-bar-style" content="black" />
           <meta name="apple-mobile-web-app-title" content="Foot Right Podiatry" />
 
-          <meta name="google-site-verification" content="OaySxtYDdqGFmLgV137w-6OpTOp4k1TbRS5HJ6KCG7k" />
+          <meta
+            name="google-site-verification"
+            content="OaySxtYDdqGFmLgV137w-6OpTOp4k1TbRS5HJ6KCG7k"
+          />
+
+          {bodyAttrs &&
+            bodyAttrs.lId && (
+              <link rel="opengraph" href="https://footrightpodiatry.lpages.co/foot-pain/" />
+            )}
+          {bodyAttrs &&
+            bodyAttrs.lId && (
+              <script src={`//footrightpodiatry.lpages.co/_/js/${bodyAttrs.lId}/`} />
+            )}
 
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -106,7 +119,7 @@ export default class Html extends Component {
             }}
           />
         </head>
-        <body className="">
+        <body className={bodyAttrs && bodyAttrs.lId && 'is-landing'}>
           <div id="content" dangerouslySetInnerHTML={{ __html: content }} />
           {store && (
             <script

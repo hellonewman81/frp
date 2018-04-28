@@ -10,8 +10,10 @@ const getData = async req => {
 
   const { pathname } = req;
   const res = pathname.replace(/^\/|\/$/g, '').split('/');
-  const [path, id] = res;
+  let [path, id] = res;
   console.log(`${path} ${id}`);
+
+  if (path === 'l') path = 'landing';
   // /services/biomechanical-assessment
   let x = [];
   await Prismic.getApi(apiEndpoint, { accessToken: apiToken })

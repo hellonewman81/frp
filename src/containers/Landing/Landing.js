@@ -26,7 +26,7 @@ const linkResolver = function (doc) {
 })
 @connect(
   state => ({
-    page: state.page.data.data,
+    page: state.page.data,
     breadcrumbs: [
       {
         url: '/',
@@ -44,7 +44,7 @@ const linkResolver = function (doc) {
   }),
   {}
 )
-export default class Page extends Component {
+export default class Landing extends Component {
   static propTypes = {
     page: PropTypes.shape({
       breadcrumbs: PropTypes.any,
@@ -67,53 +67,13 @@ export default class Page extends Component {
         {page ? (
           <div className="pt-md-2">
             <Helmet
-              title={page.title[0].text}
+              title={page.data.title[0].text}
               meta={[{ name: 'description', content: 'Foot Right Podiatry' }]}
-            />
+            >
+              <body lId={page.uid} />
+            </Helmet>
             <Container>
               <Breadcrumbs items={this.props.breadcrumbs} />
-
-              {page.path}
-            </Container>
-            <Container>
-              <Row>
-                <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-                  <div className="my-4">{RichText.render(page.title, linkResolver)}</div>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-                  {page.image && (
-                    <img
-                      src={page.image.url}
-                      alt={page.image.alt}
-                      style={{ maxWidth: '100%' }}
-                      className="mb-3"
-                    />
-                  )}
-                </Col>
-                <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-                  <div className="lead">{RichText.render(page.overview, linkResolver)}</div>
-                  <div>{RichText.render(page.body, linkResolver)}</div>
-                </Col>
-              </Row>
-
-              <Row className="my-5 text-center">
-                <Col xs={12}>
-                  <a
-                    className="btn btn-outline-primary btn-xl d-block d-md-inline-block text-uppercase m-1"
-                    href="/contact"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    className="btn btn-primary btn-xl d-block d-md-inline-block text-uppercase mx-1"
-                    href="/booking"
-                  >
-                    Book Appointment
-                  </a>
-                </Col>
-              </Row>
             </Container>
           </div>
         ) : (
