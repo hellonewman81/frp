@@ -108,7 +108,7 @@ export default class Services extends Component {
                   {page &&
                     page.map(item => (
                       <div className="col-md-3 col-sm-4 col-xs-6 portfolio-item">
-                        <a className="portfolio-link" href={`${linkResolver(item)}`}>
+                        <a className="portfolio-link bg-white h-100" href={`${linkResolver(item)}`}>
                           <div className="portfolio-hover">
                             <div className="portfolio-hover-content">
                               <i className="fa fa-plus fa-3x" />
