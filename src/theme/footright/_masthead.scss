@@ -21,6 +21,13 @@ header.masthead {
     }
   }
 
+  .intro-text {
+    padding-top: 10vh;
+    @media (min-width: 776px) {
+      padding-top: 20vh;
+    }
+  }
+
 
 
   @media (min-width: 992px) {

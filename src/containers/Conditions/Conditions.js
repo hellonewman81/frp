@@ -91,7 +91,7 @@ export default class Services extends Component {
               }}
             >
               <div className="container">
-                <div className="intro-text" style={{ paddingTop: '20vh' }}>
+                <div className="intro-text intro-text-alt">
                   <div className="intro-lead-in">Conditions</div>
                   <div className="intro-heading text-uppercase">Foot Right Podiatry</div>
                 </div>
