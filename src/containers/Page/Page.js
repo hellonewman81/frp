@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Link, RichText, Date } from 'prismic-reactjs';
 import { Row, Col, Container } from 'reactstrap';
 import { isLoaded as isPageLoaded, load as loadPage } from 'redux/modules/page';
-import { Breadcrumbs, View } from 'components';
+import { Breadcrumbs, View, YouTubePlayer } from 'components';
 
 const linkResolver = function (doc) {
   // Pretty URLs for known types
@@ -92,6 +92,13 @@ export default class Page extends Component {
                     />
                   )}
                 </Col>
+
+                <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
+                  {page.youtube_id &&
+                    <YouTubePlayer id={page.youtube_id} />
+                  }
+                </Col>
+
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
                   <div className="lead">{RichText.render(page.overview, linkResolver)}</div>
                   <div>{RichText.render(page.body, linkResolver)}</div>
