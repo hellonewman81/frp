@@ -94,9 +94,7 @@ export default class Page extends Component {
                 </Col>
 
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>
-                  {page.youtube_id &&
-                    <YouTubePlayer id={page.youtube_id} />
-                  }
+                  {page.youtube_id && <YouTubePlayer id={page.youtube_id} />}
                 </Col>
 
                 <Col xs={12} md={12} lg={{ size: 8, order: 1, offset: 2 }}>

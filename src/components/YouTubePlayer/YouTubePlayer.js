@@ -39,14 +39,11 @@ export default class YouTubePlayer extends React.Component {
 
     return (
       <div>
-        {id &&
-            <div className="embed-responsive embed-responsive-16by9 mb-3">
-
-              MOOO
-
-              {this.state.ready && <YouTube videoId={id} opts={opts} />}
-            </div>
-          }
+        {id && (
+          <div className="embed-responsive embed-responsive-16by9 mb-3">
+            {this.state.ready && <YouTube videoId={id} opts={opts} />}
+          </div>
+        )}
       </div>
     );
   }
